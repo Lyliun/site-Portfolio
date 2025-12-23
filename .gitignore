@@ -7,15 +7,6 @@ node_modules/
 coverage/
 *.log
 
-# Next.js
-frontend/.next/
-frontend/out/
-frontend/build/
-
-# Nest.js
-backend/dist/
-backend/build/
-
 # Env files
 .env
 .env.local
