@@ -37,6 +37,12 @@ export class ContactService {
       throw new InternalServerErrorException('Email inválido.');
     }
 
+    // ensure recipient configured in non-test environments
+    if (process.env.NODE_ENV !== 'test' && !process.env.EMAIL_TO) {
+      this.logger.warn('EMAIL_TO is not configured; cannot send email');
+      throw new InternalServerErrorException('Email delivery not configured.');
+    }
+
     try {
       const mailOptions: nodemailer.SendMailOptions = {
         from: process.env.EMAIL_FROM ?? email,

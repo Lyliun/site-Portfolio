@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import { Test, TestingModule } from '@nestjs/testing';
 import { AnalyticsService } from '../analytics.service';
 import { EventType, TrackEventDto } from '../dto/analytics.dto';
